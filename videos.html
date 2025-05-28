@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - empyreandance</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background-color: #0a0a0a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+            border-bottom: 1px solid #222;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 1.1em;
+        }
+
+        nav {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            display: inline-block;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover, nav a.active {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        .content {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 2em;
+            font-weight: 300;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+            color: #fff;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .media-item {
+            background: #111;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+        }
+
+        .media-item:hover {
+            border-color: #444;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .media-title {
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #fff;
+            font-size: 1.1em;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666;
+            font-size: 0.9em;
+            border-top: 1px solid #222;
+            margin-top: 100px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 1em;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .media-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        /* For larger screens, ensure 2 columns */
+        @media (min-width: 1024px) {
+            .media-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>empyreandance</h1>
+            <p class="subtitle">Composer & Musician</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="works.html">Works</a>
+            <a href="videos.html" class="active">Videos</a>
+            <a href="audio.html">Audio</a>
+        </nav>
+
+        <div class="content">
+            <h2>Videos</h2>
+            <div class="media-grid">
+                <div class="media-item">
+                    <h3 class="media-title">String Quartet No. 1 - Live Performance</h3>
+                    <div class="video-wrapper">
+                        <!-- Replace YOUTUBE_VIDEO_ID with your actual video ID -->
+                        <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <h3 class="media-title">Nocturne for Piano - Studio Recording</h3>
+                    <div class="video-wrapper">
+                        <!-- Replace YOUTUBE_VIDEO_ID with your actual video ID -->
+                        <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <h3 class="media-title">Wind Quintet Rehearsal</h3>
+                    <div class="video-wrapper">
+                        <!-- Replace YOUTUBE_VIDEO_ID with your actual video ID -->
+                        <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <h3 class="media-title">Symphony No. 1 - Orchestra Preview</h3>
+                    <div class="video-wrapper">
+                        <!-- Replace YOUTUBE_VIDEO_ID with your actual video ID -->
+                        <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!-- Add more videos here following the same pattern -->
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 empyreandance. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
