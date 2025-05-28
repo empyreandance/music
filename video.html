@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - Alex Cooke</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background-color: #0a0a0a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+            border-bottom: 1px solid #222;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 1.1em;
+        }
+
+        nav {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            display: inline-block;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover, nav a.active {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        .content {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 2em;
+            font-weight: 300;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+            color: #fff;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .media-item {
+            background: #111;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+        }
+
+        .media-item:hover {
+            border-color: #444;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .media-title {
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #fff;
+            font-size: 1.3em;
+        }
+
+        .media-performers {
+            font-size: 0.9em;
+            color: #999;
+            margin-top: 15px;
+            line-height: 1.4;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666;
+            font-size: 0.9em;
+            border-top: 1px solid #222;
+            margin-top: 100px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 1em;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .media-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        /* For larger screens, ensure 2 columns */
+        @media (min-width: 1024px) {
+            .media-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Alex Cooke</h1>
+            <p class="subtitle">Composer and Educator</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="works.html">Works</a>
+            <a href="videos.html" class="active">Videos</a>
+            <a href="audio.html">Audio</a>
+        </nav>
+
+        <div class="content">
+            <h2>Videos</h2>
+            <div class="media-grid">
+                <div class="media-item">
+                    <h3 class="media-title">Scarcity</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/gOdbGVO8mMg" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="media-performers">Maude Cloutier, violin<br>Martha Sprague, cello<br>Ying Ho Joanna Huang, piano</div>
+                </div>
+                <div class="media-item">
+                    <h3 class="media-title">Faces of the Night Sky</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/EmzzloztE3U" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="media-performers">CIM New Music Ensemble<br>Conductor: Dean Buck</div>
+                </div>
+                <div class="media-item">
+                    <h3 class="media-title">Glow</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/07nr1gJAogk" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="media-performers">Violin: Beatrice Hsieh, Charles Gleason<br>Viola: John Grigsby<br>Cello: Dan Blumhard</div>
+                </div>
+                <div class="media-item">
+                    <h3 class="media-title">Nocturne</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/T_aJ8ovs6HU" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="media-performers">Christine Wu, violin<br>Qingye Wu, piano</div>
+                </div>
+                <div class="media-item">
+                    <h3 class="media-title">Susurrant</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/UD3RAwoYGnM" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="media-performers">Violin: Paul Kim, Kevin Tompkins<br>Viola: Jesse Pasternak<br>Cello: Daniel Lim<br>Harp: Shelly Du<br>Piano: Maggie Morrison</div>
+                </div>
+                <div class="media-item">
+                    <h3 class="media-title">Spaces</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/GzjZeCXlXjA" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="media-performers">Viola: Julia Clancy</div>
+                </div>
+                <div class="media-item">
+                    <h3 class="media-title">Petrichor</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/Ba7tit6PkNI" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="media-performers">E-flat Clarinet: Blair Hotz<br>B-flat Clarinets: Jaewon Kim, Bora Yoon, Lacey Hyunjeong Yun<br>Bass Clarinets: Zach Myones, Drew Sullivan</div>
+                </div>
+                <div class="media-item">
+                    <h3 class="media-title">Ripple</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/LZy-34_oD9g" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="media-performers">Piano: Maggie Morrison</div>
+                </div>
+                <div class="media-item">
+                    <h3 class="media-title">Insistence</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/A5eL_dV0ZWc" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="media-performers">Cello: Meghan Carey<br>Piano: Maggie Morrison</div>
+                </div>
+                <div class="media-item">
+                    <h3 class="media-title">Crossfade</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/BxRAwrq3bKI" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="media-performers">Flute/Piccolo: Zoe Sorrell<br>Clarinet: Jessica Pollack<br>Violin: Sarah Cranor<br>Cello: Úna Fionnuala O'Riordan<br>Percussion: Kevin Rank<br>Piano: Sonya Belaya</div>
+                </div>
+                <div class="media-item">
+                    <h3 class="media-title">Wistful Musings</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/X4NjCQwr004" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="media-performers">Cello: Sawyer Thomson<br>Piano: Maggie Morrison</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Alex Cooke. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
