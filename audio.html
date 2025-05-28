@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio - Alex Cooke</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background-color: #0a0a0a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+            border-bottom: 1px solid #222;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 1.1em;
+        }
+
+        nav {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            display: inline-block;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover, nav a.active {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        .content {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 2em;
+            font-weight: 300;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+            color: #fff;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .media-item {
+            background: #111;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+        }
+
+        .media-item:hover {
+            border-color: #444;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .audio-wrapper {
+            position: relative;
+            height: 166px;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+        }
+
+        .audio-wrapper iframe {
+            width: 100%;
+            height: 166px;
+            border: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666;
+            font-size: 0.9em;
+            border-top: 1px solid #222;
+            margin-top: 100px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 1em;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .media-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        /* For larger screens, ensure 2 columns */
+        @media (min-width: 1024px) {
+            .media-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Alex Cooke</h1>
+            <p class="subtitle">Composer and Educator</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="works.html">Works</a>
+            <a href="videos.html">Videos</a>
+            <a href="audio.html" class="active">Audio</a>
+        </nav>
+
+        <div class="content">
+            <h2>Audio</h2>
+            <div class="media-grid">
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988094&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988073&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988067&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988058&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988049&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988046&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988040&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988037&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988031&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988028&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988022&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988016&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988010&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988007&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988004&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910988001&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910987998&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910987995&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div class="audio-wrapper">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay"
+                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910987992&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Alex Cooke. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
