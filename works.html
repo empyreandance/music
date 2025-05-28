@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works - Alex Cooke</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background-color: #0a0a0a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+            border-bottom: 1px solid #222;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 1.1em;
+        }
+
+        nav {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            display: inline-block;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover, nav a.active {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        .content {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 2em;
+            font-weight: 300;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+            color: #fff;
+        }
+
+        .works-list {
+            list-style: none;
+        }
+
+        .work-item {
+            padding: 25px;
+            margin-bottom: 20px;
+            background: #111;
+            border-radius: 8px;
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+        }
+
+        .work-item:hover {
+            background: #1a1a1a;
+            border-color: #444;
+            transform: translateX(5px);
+        }
+
+        .work-title {
+            font-size: 1.3em;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .work-details {
+            color: #999;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+
+        .work-description {
+            color: #bbb;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666;
+            font-size: 0.9em;
+            border-top: 1px solid #222;
+            margin-top: 100px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 1em;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .work-item {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Alex Cooke</h1>
+            <p class="subtitle">Composer and Educator</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="works.html" class="active">Works</a>
+            <a href="videos.html">Videos</a>
+            <a href="audio.html">Audio</a>
+        </nav>
+
+        <div class="content">
+            <h2>Works</h2>
+            <ul class="works-list">
+                <li class="work-item">
+                    <div class="work-title">Criticality</div>
+                    <div class="work-details">2022 • For violin and computer-controlled instrument (with Jesse Berezovsky)</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Vortex Strings</div>
+                    <div class="work-details">2022 • For string quartet (with Jesse Berezovsky)</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Renormalization</div>
+                    <div class="work-details">2022 • For viola and computer-controlled instrument (with Jesse Berezovsky)</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Harmonicity</div>
+                    <div class="work-details">2022 • For computer-controlled instrument (with Jesse Berezovsky)</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Faces of the Night Sky</div>
+                    <div class="work-details">2019 • For chamber orchestra</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Scarcity</div>
+                    <div class="work-details">2018 • For piano trio</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Various songs for guitar, cello, and piano</div>
+                    <div class="work-details">2018</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Empty North</div>
+                    <div class="work-details">2018 • For electronics</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Into the Gray</div>
+                    <div class="work-details">2017 • Singer-songwriter album</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Glow</div>
+                    <div class="work-details">2017 • For string quartet</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Nocturne</div>
+                    <div class="work-details">2016 • For violin and piano</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Desert</div>
+                    <div class="work-details">2016 • Electronic</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Saraswati</div>
+                    <div class="work-details">2015 • For solo cello and cello ensemble</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Susurrant</div>
+                    <div class="work-details">2014 • For string quartet, harp and piano</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Crossfade</div>
+                    <div class="work-details">2014 • For Pierrot Ensemble</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Spaces</div>
+                    <div class="work-details">2014 • For solo viola</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Insistence</div>
+                    <div class="work-details">2014 • For cello and piano</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Decided</div>
+                    <div class="work-details">2014 • Electronic</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Descent</div>
+                    <div class="work-details">2014 • For orchestra</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Twitterpated</div>
+                    <div class="work-details">2014 • For saxophone sextet</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Petrichor</div>
+                    <div class="work-details">2013 • For clarinet sextet</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Apricity</div>
+                    <div class="work-details">2013 • For chamber orchestra</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Ripple</div>
+                    <div class="work-details">2013 • For solo piano</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Wistful Musings</div>
+                    <div class="work-details">2013 • For cello and piano</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Atmospheric Dances</div>
+                    <div class="work-details">2012 • Suite for chamber orchestra</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Dancing Under Influence</div>
+                    <div class="work-details">2011 • Electronic</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Lac de Feu</div>
+                    <div class="work-details">2011 • For orchestra</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">A Sunday Afternoon Improv</div>
+                    <div class="work-details">2011 • For solo guitar</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Swells</div>
+                    <div class="work-details">2011 • For solo piano</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Suspended Moment</div>
+                    <div class="work-details">2010 • For 12-string guitar, three electric guitars and electronics</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Birds</div>
+                    <div class="work-details">2010 • For acoustic guitar and three electric guitars</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">Onward</div>
+                    <div class="work-details">2010 • For cello and piano</div>
+                </li>
+                <li class="work-item">
+                    <div class="work-title">No. 14</div>
+                    <div class="work-details">2009 • For three electric guitars</div>
+                </li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Alex Cooke. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
